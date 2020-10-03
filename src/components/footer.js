@@ -16,9 +16,36 @@ const BottomBar = styled.div`
     justify-content: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+
     @media only screen and (max-width: 450px){
         flex-direction: column;
         align-items: center;
+    }
+
+    .center{
+        border-right: 2px solid white;
+        border-left: 2px solid white;
+        padding: 0 2rem 0 2rem;
+        margin: 0 2rem 0 2rem;
+
+        @media only screen and (max-width: 450px){
+            padding: 2rem 0 2rem 0;
+            margin: 2rem 0 2rem 0;
+            border-right: none;
+            border-left: none;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            text-align: left;
+        }
+    }
+
+    h3{
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+    }
+
+    p{
+        font-size: .9rem;
     }
 `;
 
@@ -27,36 +54,9 @@ const BarItem = styled.div`
     text-align: left;
 `;
 
-const CenterBarItem = styled.div`
-    font-size: 1.5rem;
-    color: white;
-    border-right: 2px solid white;
-    border-left: 2px solid white;
-    padding: 0 2rem 0 2rem;
-    margin: 0 2rem 0 2rem;
-    @media only screen and (max-width: 450px){
-        padding: 2rem 0 2rem 0;
-        margin: 2rem 0 2rem 0;
-        border-right: none;
-        border-left: none;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
-        text-align: left;
-    }
-`;
-
-const BarTitle = styled.h3`
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-`
-
 const TitleWrap = styled.div`
     display: flex;
     flex-direction: row;
-`;
-
-const BarParagraph = styled.p`
-    font-size: .9rem;
 `;
 
 const LowerFoot = styled.div`
@@ -80,54 +80,40 @@ const Card = styled.div`
         width: 100%;
         margin-bottom: 3rem;
     }
-`
-const CenterCard = styled.div`
-    max-width: 300px;
-    @media only screen and (max-width: 450px){
-        text-align: center;
-        width: 100%;
-        margin-bottom: 3rem;
+    h4{
+        font-size: 1.5rem;
+        padding-bottom: 3rem;
     }
-    
+    ul{
+        list-style-type: '-';
+    }
+    li{
+        padding-bottom: .5rem;
+    }
+    address{
+        display: flex;
+        flex-direction: column;
+    }
 `
-
-const CardTitle = styled.h4`
-    font-size: 1.5rem;
-    padding-bottom: 3rem;
-`;
-
-const Paragraph = styled.p``;
-
-const List = styled.ul`
-    list-style-type: '-';
-`;
-
-const Item = styled.li`
-    padding-bottom: .5rem;
-`;
-
-const Address = styled.address`
-    display: flex;
-    flex-direction: column;
-`;
-
 const LinksList = styled.div`
     display: flex;
     flex-direction: row;
     padding-top: 1rem;
+
     @media only screen and (max-width: 450px){
         width: 100%;
         justify-content: center;
     }
-`;
 
-const ExtLink = styled.a`
-    padding: .5rem;
-    :hover{
-        cursor: pointer;
-        background-color: rgb(17, 45, 89);
-        color:  white;
-        border-radius: 10px;
+    a {
+        color:black;
+        padding: .5rem;
+        :hover{
+            cursor: pointer;
+            background-color: rgb(17, 45, 89);
+            color:  white;
+            border-radius: 10px;
+        }
     }
 `;
 
@@ -137,60 +123,60 @@ const Footer = () => (
             <BarItem>
                 <TitleWrap>
                     <Phone />
-                    <BarTitle>Call Us</BarTitle>
+                    <h3>Call Us</h3>
                 </TitleWrap>
-                <BarParagraph>123-456-7890</BarParagraph>
+                <p>123-456-7890</p>
             </BarItem>
-            <CenterBarItem>
+            <BarItem className="center">
                 <TitleWrap>
                     <Mail />
-                    <BarTitle>Email Us</BarTitle>
+                    <h3>Email Us</h3>
                 </TitleWrap>
-                <BarParagraph>example@charter.com</BarParagraph>
-            </CenterBarItem>
+                <p>example@charter.com</p>
+            </BarItem>
             <BarItem>
                 <TitleWrap>
                     <Home />
-                    <BarTitle>Hours</BarTitle>
+                    <h3>Hours</h3>
                 </TitleWrap>
-                <BarParagraph>9-5 Monday-Friday</BarParagraph>
+                <p>9-5 Monday-Friday</p>
             </BarItem>
         </BottomBar>
         <LowerFoot>
             <Card>
-                <CardTitle>Over 20 years experience</CardTitle>
-                <Paragraph>Over 10 awards for teaching excelence</Paragraph>
+                <h4>Over 20 years experience</h4>
+                <p>Over 10 awards for teaching excelence</p>
                 <LinksList>
-                    <ExtLink>
+                    <a href="#">
                         <Facebook/>
-                    </ExtLink>
-                    <ExtLink>
+                    </a>
+                    <a href="#">
                         <Instagram/>
-                    </ExtLink>
-                    <ExtLink>
+                    </a>
+                    <a href="#">
                         <Twitter/>
-                    </ExtLink>
-                    <ExtLink>
+                    </a>
+                    <a href="#">
                         <Youtube/>
-                    </ExtLink>
+                    </a>
                 </LinksList>
             </Card>
-            <CenterCard>
-                <CardTitle>Services</CardTitle>
-                <List>
-                    <Item>Courses</Item>
-                    <Item>Charters</Item>
-                    <Item>Rentals</Item>
-                    <Item>Competitions</Item>
-                    <Item>Events</Item>
-                </List>
-            </CenterCard>
             <Card>
-                <CardTitle>Visit Us</CardTitle>
-                <Address>
+                <h4>Services</h4>
+                <ul>
+                    <li>Courses</li>
+                    <li>Charters</li>
+                    <li>Rentals</li>
+                    <li>Competitions</li>
+                    <li>Events</li>
+                </ul>
+            </Card>
+            <Card>
+                <h4>Visit Us</h4>
+                <address>
                     <span>123 North beach St</span>
                     <span>San Francisco, CA</span>
-                </Address>
+                </address>
             </Card>
         </LowerFoot>
     </FooterContainer>

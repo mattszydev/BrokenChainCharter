@@ -13,10 +13,20 @@ const ContentWrapper = styled.div`
     padding-left: 7rem;
     max-width: 800px;
     height: 100%;
+    color:white;
     
     @media only screen and (max-width: 600px){
         padding: 10rem 1rem 0 1rem;
         text-align: center;
+    }
+
+    h1{
+        font-size: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    p{
+        font-size: 1.5rem;
     }
 `;
 
@@ -45,6 +55,24 @@ const BottomBar = styled.div`
     justify-content: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+
+    .center{
+        font-size: 1.5rem;
+        border-right: 2px solid white;
+        border-left: 2px solid white;
+        padding: 0 2rem 0 2rem;
+        margin: 0 2rem 0 2rem;
+
+        @media only screen and (max-width: 450px){
+            border-right: none;
+            border-left: none;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            padding: 2rem 0 2rem 0;
+            margin:  2rem 0 2rem 0;
+        }
+    }
+
     @media only screen and (max-width: 450px){
         flex-direction: column;
         align-items: center;
@@ -53,69 +81,36 @@ const BottomBar = styled.div`
 
 const BarItem = styled.div`
     font-size: 1.5rem;
-`;
 
-const CenterBarItem = styled.div`
-    font-size: 1.5rem;
-    color: white;
-    border-right: 2px solid white;
-    padding: 0 2rem 0 2rem;
-    margin: 0 2rem 0 2rem;
-    
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    
-    @media only screen and (max-width: 450px){
-        border-right: none;
-        border-left: none;
-        padding: 2rem 0 2rem 0;
-        margin:  2rem 0 2rem 0;
-
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
-        
+    h3{
+        padding-bottom: 1rem;
     }
-`;
 
-const BarTitle = styled.h3`
-    padding-bottom: 1rem;
-`
-
-const BarParagraph = styled.p`
-    font-size: .9rem;
-`;
-
-const Title = styled.h1`
-    font-size: 3rem;
-    padding-bottom: 4rem;
-    color:  white;
-`;
-
-const Paragraph = styled.p`
-    font-size: 1.5rem;
-    color:  white;
+    p{
+        font-size: .9rem;
+    }
 `;
 
 const Hero = () => (
     <HeroContainer>
         <Wrapper>
             <ContentWrapper>
-                <Title>Broken Chain Charters</Title>
-                <Paragraph>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem, aperiam nam consectetur explicabo qui atque incidunt quam, modi, eum delectus? Nobis magni officia perspiciatis accusamus.</Paragraph>
+                <h1>Broken Chain Charters</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem, aperiam nam consectetur explicabo qui atque incidunt quam, modi, eum delectus? Nobis magni officia perspiciatis accusamus.</p>
             </ContentWrapper>
         </Wrapper>
         <BottomBar>
             <BarItem>
-                <BarTitle>Courses</BarTitle>
-                <BarParagraph>ASA certified classes for all skill levels</BarParagraph>
+                <h3>Courses</h3>
+                <p>ASA certified classes for all skill levels</p>
             </BarItem>
-            <CenterBarItem>
-                <BarTitle>Charter</BarTitle>
-                <BarParagraph>Book a day sailing experience with your friends</BarParagraph>
-            </CenterBarItem>
+            <BarItem className="center">
+                <h3>Charter</h3>
+                <p>Book a day sailing experience with your friends</p>
+            </BarItem>
             <BarItem>
-                <BarTitle>Rental</BarTitle>
-                <BarParagraph>Rent a boat from our fleet to sail on your own</BarParagraph>
+                <h3>Rental</h3>
+                <p>Rent a boat from our fleet to sail on your own</p>
             </BarItem>
         </BottomBar>
     </HeroContainer>

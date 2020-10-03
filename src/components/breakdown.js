@@ -15,16 +15,16 @@ const MainWrapper = styled.div`
     max-width: 800px;
     padding-bottom: 5rem;
     margin: auto;
-`;
 
-const MainTitle = styled.h2`
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-`;
+    h2{
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
 
-const MainParagraph = styled.p`
-    font-size: 1.4rem;
-    line-height: 1.3rem;
+    p{
+        font-size: 1.4rem;
+        line-height: 1.3rem;
+    }
 `;
 
 const CardWrapper = styled.div`
@@ -43,40 +43,40 @@ const Card = styled.div`
     @media only screen and (max-width: 450px){
         margin-bottom: 4rem;
     }
-`;
 
-const CardTitle = styled.h3`
-    font-size: 1.6rem;
-    padding: 2rem 0 2rem 0;
-`;
+    h3{
+        font-size: 1.6rem;
+        padding: 2rem 0 2rem 0;
+    }
 
-const CardParagraph = styled.p`
-    font-size: 1.2rem;
-    line-height: 1.3rem;
+    p{
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
 `;
 
 const BreakDown = () => (
     <Container>
         <MainWrapper>
-            <MainTitle>Best lessons available anywhere</MainTitle>
-            <MainParagraph>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem, aperiam nam consectetur explicabo qui atque incidunt quam, modi, eum delectus?</MainParagraph>
+            <h2>Best lessons available anywhere</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem, aperiam nam consectetur explicabo qui atque incidunt quam, modi, eum delectus?</p>
         </MainWrapper>
         
         <CardWrapper>
             <Card>
                 <MapPin style={{color:`rgb(232, 58, 58)`}} size={50} />
-                <CardTitle>Multiple location to choose from</CardTitle>
-                <CardParagraph>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem.</CardParagraph>
+                <h3>Multiple location to choose from</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem.</p>
             </Card>
             <Card>
                 <Award style={{color:`rgb(232, 58, 58)`}} size={50}/>
-                <CardTitle>Staff of ASA certified instructors</CardTitle>
-                <CardParagraph>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem.</CardParagraph>
+                <h3>Staff of ASA certified instructors</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem.</p>
             </Card>
             <Card>
                 <Compass style={{color:`rgb(232, 58, 58)`}} size={50} />
-                <CardTitle>Helping you find a new life passion</CardTitle>
-                <CardParagraph>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem.</CardParagraph>
+                <h3>Helping you find a new life passion</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem.</p>
             </Card>
         </CardWrapper>
 

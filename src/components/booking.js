@@ -11,11 +11,7 @@ const Container = styled.section`
     flex-wrap: wrap;
     justify-content:center;
     align-items: center;
-    @media only screen and (max-width: 800px){
-        
-    }
 `;
-
 
 const TextWrap = styled.div`
     font-family: Arial, Helvetica, sans-serif;
@@ -26,16 +22,16 @@ const TextWrap = styled.div`
         width: 100%;
         text-align: left;
     }
-`;
 
-const Title = styled.h2`
-    padding-bottom: 2rem;
-    font-size: 2.5rem;
-`;
+    h2{
+        padding-bottom: 2rem;
+        font-size: 2.5rem;
+    }
 
-const Text = styled.p`
-    font-size: 1.2rem;
-    line-height: 1.3rem;
+    p{
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
 `;
 
 const CTA = styled.div`
@@ -66,15 +62,13 @@ const Button = styled(Link)`
 
 const Booking = () => (
     <Container>
-       
         <TextWrap>
-            <Title>Come visit us</Title>
-            <Text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem, aperiam nam consectetur explicabo qui atque incidunt quam, modi, eum delectus?</Text>
+            <h2>Come visit us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem, aperiam nam consectetur explicabo qui atque incidunt quam, modi, eum delectus?</p>
         </TextWrap>
         <CTA>
-        <Button>Book Now</Button>
+            <Button>Book Now</Button>
         </CTA>
-       
     </Container>
 );
 
