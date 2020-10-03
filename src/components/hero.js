@@ -12,8 +12,11 @@ const ContentWrapper = styled.div`
     padding-top: 15rem;
     padding-left: 7rem;
     max-width: 800px;
+    height: 100%;
+    
     @media only screen and (max-width: 600px){
         padding: 10rem 1rem 0 1rem;
+        text-align: center;
     }
 `;
 
@@ -50,9 +53,6 @@ const BottomBar = styled.div`
 
 const BarItem = styled.div`
     font-size: 1.5rem;
-    @media only screen and(max-width: 450px){
-        text-align: left;
-    }
 `;
 
 const CenterBarItem = styled.div`

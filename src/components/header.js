@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import {Anchor} from "react-feather"
+import {Anchor, Menu} from "react-feather"
 import {Link} from "gatsby"
 
 const HeaderContainer = styled.header`
@@ -12,10 +12,13 @@ const HeaderContainer = styled.header`
   background-color: white;
   display: grid;
   grid-template-columns: auto auto;
-  align-items: baseline;
+  align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
   justify-items: center;
+  @media only screen and (max-width: 450px){
+    justify-content: space-between;
+  }
 `;
 
 const Logo = styled.div`
@@ -23,12 +26,11 @@ const Logo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width: 450px){
+    margin-left: 1rem;
+  }
 `;
   
-const Title = styled.h2`
-
-`;
-
 const Nav = styled.nav`
   max-width: 700px;
   @media only screen and (max-width: 450px){
@@ -41,8 +43,12 @@ const List = styled.ul`
   flex-direction: row;
 `;
 
-const Item = styled.li`
-
+const Icon = styled(Menu)`
+  display: none;
+  @media only screen and (max-width: 450px){
+    display: block;
+    margin-right: 1rem;
+  }
 `;
 
 const MyLink = styled(Link)`
@@ -58,29 +64,36 @@ const MyLink = styled(Link)`
     }
 `;
 
+const Button = styled.button`
+  border:none;
+  background: transparent;
+`;
 
 const Header = ({ siteTitle }) => (
   <HeaderContainer>
     <Logo>
       <Anchor />
-      <Title>Broken Chain Charters</Title>
+      <h2>Broken Chain Charters</h2>
     </Logo>
     <Nav>
       <List>
-        <Item>
+        <li>
           <MyLink to="/">Home</MyLink>
-        </Item>
-        <Item>
-          <MyLink to="/">About Us</MyLink>
-        </Item>
-        <Item>
+        </li>
+        <li>
+          <MyLink to="/">About</MyLink>
+        </li>
+        <li>
           <MyLink to="/">Services</MyLink>
-        </Item>
-        <Item>
+        </li>
+        <li>
           <MyLink to="/">Contact</MyLink>
-        </Item>
+        </li>
       </List>
     </Nav>
+    <Button>
+      <Icon/>
+    </Button>
   </HeaderContainer>
 )
 

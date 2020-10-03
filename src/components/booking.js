@@ -8,12 +8,14 @@ const Container = styled.section`
     padding: 7rem 0 7rem 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content:center;
     align-items: center;
-    @media only screen and (max-width: 450px){
-        flex-direction: column;
+    @media only screen and (max-width: 800px){
+        
     }
 `;
+
 
 const TextWrap = styled.div`
     font-family: Arial, Helvetica, sans-serif;
@@ -21,6 +23,8 @@ const TextWrap = styled.div`
     margin-right: 5rem;
     @media only screen and (max-width: 450px){
         margin: 0 1rem 2rem 1rem;
+        width: 100%;
+        text-align: left;
     }
 `;
 
@@ -35,14 +39,15 @@ const Text = styled.p`
 `;
 
 const CTA = styled.div`
+    margin: 0;
     width: 300px;
     height: 250px;
     background-image: url(${source});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    @media only screen and (max-width: 450px){
-        width: 100%;
+    @media only screen and (max-width: 800px){
+        width: 60%;
     }
 `;
 
@@ -61,6 +66,7 @@ const Button = styled(Link)`
 
 const Booking = () => (
     <Container>
+       
         <TextWrap>
             <Title>Come visit us</Title>
             <Text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem, aperiam nam consectetur explicabo qui atque incidunt quam, modi, eum delectus?</Text>
@@ -68,7 +74,7 @@ const Booking = () => (
         <CTA>
         <Button>Book Now</Button>
         </CTA>
-
+       
     </Container>
 );
 
