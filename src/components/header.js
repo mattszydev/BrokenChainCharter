@@ -1,8 +1,9 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import {Anchor, Menu} from "react-feather"
+import {Anchor} from "react-feather"
 import {Link} from "gatsby"
+import MobileNav from "./mobile-nav"
 
 const HeaderContainer = styled.header`
   position: absolute;
@@ -26,6 +27,7 @@ const Logo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   @media only screen and (max-width: 450px){
     margin-left: 1rem;
   }
@@ -43,14 +45,6 @@ const List = styled.ul`
   flex-direction: row;
 `;
 
-const Icon = styled(Menu)`
-  display: none;
-  @media only screen and (max-width: 450px){
-    display: block;
-    margin-right: 1rem;
-  }
-`;
-
 const MyLink = styled(Link)`
   color: black;
   font-size: 1rem;
@@ -64,10 +58,6 @@ const MyLink = styled(Link)`
     }
 `;
 
-const Button = styled.button`
-  border:none;
-  background: transparent;
-`;
 
 const Header = ({ siteTitle }) => (
   <HeaderContainer>
@@ -91,9 +81,7 @@ const Header = ({ siteTitle }) => (
         </li>
       </List>
     </Nav>
-    <Button>
-      <Icon/>
-    </Button>
+    <MobileNav/>
   </HeaderContainer>
 )
 

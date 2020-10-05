@@ -3,7 +3,6 @@ import styled from "styled-components"
 import {MapPin, Award, Compass} from "react-feather"
 
 const Container = styled.section`
-    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     text-align: center;
     padding-top: 7rem;

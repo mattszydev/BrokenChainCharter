@@ -14,7 +14,6 @@ const Container = styled.section`
 `;
 
 const TextWrap = styled.div`
-    font-family: Arial, Helvetica, sans-serif;
     max-width: 400px;
     margin-right: 5rem;
     @media only screen and (max-width: 450px){

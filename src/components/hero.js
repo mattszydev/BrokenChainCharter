@@ -54,7 +54,6 @@ const BottomBar = styled.div`
     padding-bottom: 2rem;
     justify-content: center;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
 
     .center{
         font-size: 1.5rem;

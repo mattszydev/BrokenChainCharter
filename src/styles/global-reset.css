@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -50,4 +51,13 @@ table {
 #___gatsby, html{
 	min-height: 100vh;
 	background-color: white;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+p,a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 300;
 }

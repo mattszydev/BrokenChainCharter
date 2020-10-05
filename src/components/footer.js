@@ -15,7 +15,6 @@ const BottomBar = styled.div`
     padding-bottom: 2rem;
     justify-content: center;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
 
     @media only screen and (max-width: 450px){
         flex-direction: column;
