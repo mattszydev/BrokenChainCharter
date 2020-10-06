@@ -3,6 +3,23 @@ import {Link} from "gatsby"
 import {Menu, X} from "react-feather"
 import styled from "styled-components"
 
+
+const Wrapper = styled.div`
+    display:none;
+    position: absolute;
+    right: 0;
+    top:0;
+    @media only screen and (max-width: 580px){
+        display: block;
+    }
+    .open{
+        display: block;
+    }
+    .fixed{
+        position: fixed;
+    }
+`
+
 const Nav = styled.nav`
     display: none;
     width: 60vw;
@@ -31,28 +48,15 @@ const Nav = styled.nav`
     }
 `;
 
-const Wrapper = styled.div`
-    display:none;
-    @media only screen and (max-width: 450px){
-        display: block;
-    }
-    .open{
-        display: block;
-    }
-`
-
 const Button = styled.button`
+    display: block;
     position: absolute;
+    background: transparent;
+    border:none;
     top: 0;
     right: 0;
     z-index:200;
-    border:none;
-    background: transparent;
-    display: none;
     margin: 1.5rem 1rem 0 0;
-  @media only screen and (max-width: 450px){
-    display: block;
-  }
 `;
 
 const MobileNav = () =>{
@@ -71,7 +75,7 @@ const MobileNav = () =>{
                     <li><Link to="/">Contact</Link></li>
                 </ul>
             </Nav>
-            <Button onClick={handleOpen}>
+            <Button onClick={handleOpen} className={open ? 'fixed': ''}>
                 {open ? <X/> : <Menu/>}
             </Button>
         </Wrapper>

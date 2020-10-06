@@ -30,7 +30,7 @@ const ContentWrapper = styled.div`
     }
 `;
 
-const Wrapper = styled.div`
+const HeroImage = styled.div`
     width: 100%;
     height: 85vh;
     background-image: url(${image});
@@ -42,6 +42,12 @@ const Wrapper = styled.div`
     @media only screen and (max-width: 600px){
         background-position: 90% 50%;
     }
+`;
+
+const OverLay = styled.div`
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.2);
 `;
 
 
@@ -92,12 +98,14 @@ const BarItem = styled.div`
 
 const Hero = () => (
     <HeroContainer>
-        <Wrapper>
-            <ContentWrapper>
-                <h1>Broken Chain Charters</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem, aperiam nam consectetur explicabo qui atque incidunt quam, modi, eum delectus? Nobis magni officia perspiciatis accusamus.</p>
-            </ContentWrapper>
-        </Wrapper>
+        <HeroImage>
+            <OverLay>
+                <ContentWrapper>
+                    <h1>Broken Chain Charters</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam saepe eius ipsum a quidem, aperiam nam consectetur explicabo qui atque incidunt quam, modi, eum delectus? Nobis magni officia perspiciatis accusamus.</p>
+                </ContentWrapper>
+            </OverLay>
+        </HeroImage>
         <BottomBar>
             <BarItem>
                 <h3>Courses</h3>

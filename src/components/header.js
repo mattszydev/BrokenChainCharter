@@ -17,7 +17,7 @@ const HeaderContainer = styled.header`
   padding-top: 1rem;
   padding-bottom: 1rem;
   justify-items: center;
-  @media only screen and (max-width: 450px){
+  @media only screen and (max-width: 580px){
     justify-content: space-between;
   }
 `;
@@ -28,14 +28,14 @@ const Logo = styled.div`
   flex-direction: column;
   align-items: center;
   
-  @media only screen and (max-width: 450px){
+  @media only screen and (max-width: 580px){
     margin-left: 1rem;
   }
 `;
   
 const Nav = styled.nav`
   max-width: 700px;
-  @media only screen and (max-width: 450px){
+  @media only screen and (max-width: 580px){
     display: none;
   }
 `;
