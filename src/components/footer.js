@@ -144,7 +144,7 @@ const Footer = () => (
         <LowerFoot>
             <Card>
                 <h4>Over 20 years experience</h4>
-                <p>Over 10 awards for teaching excelence</p>
+                <p>Over 10 awards for teaching excellence</p>
                 <LinksList>
                     <a href="#">
                         <Facebook/>
